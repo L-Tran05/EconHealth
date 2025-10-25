@@ -1,17 +1,19 @@
 import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Features from './components/Features'
+import HowItWorks from './components/HowitWorks'
+import FinalCTA from './components/FinalCTA'
+import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       <Navbar />
-      <div className="py-20 text-center">
-        <h1 className="text-4xl font-bold text-gray-900">
-          EconHealth is Coming Together! 🎉
-        </h1>
-        <p className="text-xl text-gray-600 mt-4">
-          Navbar is working with Tailwind!
-        </p>
-      </div>
+      <Hero />
+      <Features />
+      <HowItWorks />
+      <FinalCTA />
+      <Footer />
     </div>
   )
 }
