@@ -7,7 +7,7 @@ Medical debt is the #1 cause of bankruptcy in the US. When people receive confus
 - Miss opportunities for financial assistance
 - Don't know how to negotiate or set up payment plans
 - Feel overwhelmed and anxious
-- 
+
 
 # What it does
 - Breaks down medical bills line by line in simple language
