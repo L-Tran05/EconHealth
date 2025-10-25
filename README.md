@@ -1,40 +1,16 @@
-# EconHealth
-An AI-powered tool that helps people understand and navigate confusing medical bills during health-related financial crises. 
-EconHealth translates complex medical bills into plain English and provides actionable next steps.
+# React + Vite
 
-Medical debt is the #1 cause of bankruptcy in the US. When people receive confusing medical bills, they often:
-- Don't understand what they're being charged for
-- Miss opportunities for financial assistance
-- Don't know how to negotiate or set up payment plans
-- Feel overwhelmed and anxious
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+Currently, two official plugins are available:
 
-# What it does
-- Breaks down medical bills line by line in simple language
-- Explains charges that are typically confusing
-- Suggests financial assistance programs and resources
-- Provides guidance on payment plans and bill negotiation
-- Offers immediate help for people in financial crisis over healthcare costs
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+## React Compiler
 
-# How we built it
-- Frontend: HTML, CSS, JavaScript
-- AI: Google Gemini API for natural language understanding and bill analysis
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
+## Expanding the ESLint configuration
 
-# Challenges we're targeting
-- OneEthos: AI for Financial Empowerment Challenge - Democratizing financial advice and empowering informed decision-making around healthcare costs
-- Major League Hacking Challenge
-- Best Use of Gemini API - Analyzing complex documents and providing personalized, clear explanations
-- Best Overall Hack
-- First Time Hack
-- Prettiest Hack
-- Most “Useful” Hack 
-
-
-# Submission Checklist
-✅ One team member should create the team and invite others on DevPost. (This determines team composition.)
-✅ Record and attach a demo video of your project.
-✅ Select the sponsored and category prizes you’d like to be considered for. (Teams are automatically opted in to be judged for different tracks and overall best)
-✅ Include a public GitHub repository link — private or missing repos will lead to disqualification.
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
