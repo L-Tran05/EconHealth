@@ -59,7 +59,7 @@ const HomePage = ({ onStartDemo }) => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 text-2xl font-bold mb-6">1</div>
               <Upload className="w-8 h-8 mx-auto text-blue-600 mb-3" />
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Share your bill</h3>
-              <p className="text-gray-600">Paste your medical bill or use our sample to get started instantly</p>
+              <p className="text-gray-600">Paste your medical bill to get started instantly</p>
             </div>
 
             {/* Numba 2 Teto */}
@@ -81,7 +81,7 @@ const HomePage = ({ onStartDemo }) => {
 
           {/* CTA */}
           <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl p-12 border border-gray-200">
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">Ready to reduce your medical bills?</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Ready to get help with your medical bills?</h2>
             <p className="text-gray-600 mb-6">Try our demo with a sample bill or paste your own to get started</p>
             <button
               onClick={onStartDemo}
