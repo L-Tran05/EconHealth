@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test EconHealth Backend</title>
+    <style>
+        body { font-family: Arial; padding: 40px; max-width: 800px; margin: 0 auto; }
+        button { background: #3b82f6; color: white; padding: 15px 30px; margin: 10px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; }
+        button:hover { background: #2563eb; }
+        #result { background: #f3f4f6; padding: 20px; border-radius: 8px; margin-top: 20px; white-space: pre-wrap; max-height: 500px; overflow-y: auto; }
+        .loading { color: #3b82f6; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>🧪 EconHealth Backend Test</h1>
+    
+    <h2>Test 1: Chat Assistant</h2>
+    <button onclick="testChat()">Ask: "What is a deductible?"</button>
+    
+    <h2>Test 2: Bill Analysis</h2>
+    <button onclick="testBill()">Analyze Sample Bill</button>
+    
+    <div id="result"></div>
+
+    <script>
+        async function testChat() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '<p class="loading">⏳ Asking Gemini AI...</p>';
+            
+            try {
+                const response = await fetch('http://localhost:3001/api/chat', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        question: 'What is a deductible?'
+                    })
+                });
+                
+                const data = await response.json();
+                resultDiv.innerHTML = '<h3>✅ Chat Response:</h3><pre>' + JSON.stringify(data, null, 2) + '</pre>';
+            } catch (error) {
+                resultDiv.innerHTML = '<h3>❌ Error:</h3><p>' + error.message + '</p>';
+            }
+        }
+        
+        async function testBill() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '<p class="loading">⏳ Analyzing bill with Gemini AI...</p>';
+            
+            const sampleBill = `
+MEMORIAL HOSPITAL
+EMERGENCY DEPARTMENT BILL
+
+Patient Name: John Doe
+Date of Service: October 20, 2024
+Location: Houston, Texas
+
+CHARGES:
+Emergency Room Visit - Level 4: $1,200
+Physician Fee: $450
+CT Scan - Head: $800
+Lab Tests (Complete Blood Count): $150
+IV Fluids and Medications: $200
+
+TOTAL AMOUNT DUE: $2,800
+
+Insurance: Uninsured
+            `.trim();
+            
+            try {
+                const response = await fetch('http://localhost:3001/api/analyze-bill', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        billText: sampleBill
+                    })
+                });
+                
+                const data = await response.json();
+                resultDiv.innerHTML = '<h3>✅ Bill Analysis Response:</h3><pre>' + JSON.stringify(data, null, 2) + '</pre>';
+            } catch (error) {
+                resultDiv.innerHTML = '<h3>❌ Error:</h3><p>' + error.message + '</p>';
+            }
+        }
+    </script>
+</body>
+</html>
