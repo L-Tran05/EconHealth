@@ -26,15 +26,19 @@ const AssistantPanel = ({ chatMessages, setChatMessages }) => {
     }, 500);
   };
 
+
+
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex flex-col h-fit lg:sticky lg:top-8">
-      <div className="flex items-center gap-2 mb-4">
-        <MessageSquare className="w-5 h-5 text-gray-700" />
+    <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6 flex flex-col h-[600px] w-[400px] lg:sticky lg:top-8">
+      {/* Header */} {/*Assistant*/}
+      <div className="flex items-center gap-2 mb-5">
+        <MessageSquare className="w-5 h-5 text-blue-600" />
         <h2 className="text-xl font-semibold text-gray-900">Assistant</h2>
       </div>
 
+
       {/* Quick Questions */}
-      <div className="mb-4 space-y-2">
+      <div className="mb-5 space-y-2">
         {['What is FPL?', 'Negotiation script', 'Explain charity care'].map(q => (
           <button
             key={q}
@@ -47,17 +51,17 @@ const AssistantPanel = ({ chatMessages, setChatMessages }) => {
       </div>
 
       {/* Chat Messages */}
-      <div className="flex-1 mb-4 min-h-[200px] max-h-[400px] overflow-y-auto space-y-3">
+      <div className="flex-1 mb-5 overflow-y-auto space-y-3 p-3 bg-gray-50 rounded-lg border border-gray-100">
         {chatMessages.length === 0 ? (
-          <p className="text-sm text-gray-500 text-center py-8">
+          <p className="text-sm text-gray-500 text-center py-12">
             Ask a question or click a suggestion above
           </p>
         ) : (
           chatMessages.map((msg, i) => (
             <div
               key={i}
-              className={`text-sm p-3 rounded-lg ${
-                msg.type === 'user' ? 'bg-blue-50 ml-4' : 'bg-gray-50 mr-4'
+              className={`text-sm p-3 rounded-lg leading-relaxed ${
+                msg.type === 'user' ? 'bg-blue-100 ml-8' : 'bg-white mr-8 border border-gray-200'
               }`}
             >
               {msg.text}
