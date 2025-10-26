@@ -3,7 +3,7 @@ import { FileText } from 'lucide-react';
 
 {/* Main heading for the Bill*/}
 const BillDetailsPanel = ({ billText, setBillText, setActiveTab }) => (
-  <div className="lg:col-span-3 bg-white rounded-lg shadow-sm border border-black-400 p-6 h-[420px]">
+  <div className="lg:col-span-3 bg-white rounded-lg left-10 shadow-sm border border-black-400 p-6 h-[420px]">
     <div className="flex items-center gap-2 mb-4">
       <FileText className="w-5 h-5 text-gray-900" />
       <h2 className="text-lg font-semibold text-gray-900">Bill Details</h2>

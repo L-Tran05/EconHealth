@@ -6,6 +6,7 @@ import FeaturesSection from '../components/FeaturesSection';
 
 const HomePage = ({ onStartDemo }) => {
   return (
+    
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
 
 
@@ -41,18 +42,15 @@ const HomePage = ({ onStartDemo }) => {
           >
             Chat with Us! →
           </button>
-          <button className="bg-white hover:bg-gray-50 text-gray-900 font-medium px-6 py-3 rounded-lg border border-gray-300 transition-colors">
-            How We Help
-          </button>
         </div>
 
         <FeaturesSection />
       </div>
 
-      {/* How it Works Section */}
-      <div id="how-it-works" className="py-16 bg-white">
+      {/* How it Works*/}
+      <div id="how-we-help" className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-3">How it works</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-3">How We Help</h2>
           <p className="text-gray-600 mb-12">Three simple steps to start saving on your medical bills</p>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">

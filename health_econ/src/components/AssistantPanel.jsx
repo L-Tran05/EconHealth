@@ -31,7 +31,7 @@ const AssistantPanel = ({ chatMessages, setChatMessages }) => {
   return (
     <div className="bg-white rounded-xl shadow-md border border-black-200 p-6 flex flex-col h-[600px] w-[400px] lg:sticky lg:top-8">
       {/*Assistant Main :P*/}
-      <div className="flex items-center gap-2 mb-5">
+      <div className="flex items-center gap-2 mb-5 ">
         <MessageSquare className="w-5 h-5 text-blue-600" />
         <h2 className="text-xl font-semibold text-gray-900">Assistant</h2>
       </div>

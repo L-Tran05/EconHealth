@@ -32,7 +32,7 @@ const TabsPanel = ({ activeTab, setActiveTab, billText, setBillText }) => (
         value={billText}
         onChange={(e) => setBillText(e.target.value)}
         placeholder="Medical Bill Analysis here"
-        className="w-full h-96 p-4 border border-gray-300 rounded-lg font-mono text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none mb-6"
+        className="w-full h-96 p-4 border border-black-300 rounded-lg font-mono text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none mb-6"
       />
     )}
 
