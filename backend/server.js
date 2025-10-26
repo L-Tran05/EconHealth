@@ -3,6 +3,7 @@ const cors = require('cors');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 require('dotenv').config();
 
+const { connectToSnowflake, executeQuery } = require('./snowflake');
 const app = express();
 const PORT = 3001;
 
@@ -49,6 +50,29 @@ app.post('/api/chat', async (req, res) => {
     res.status(500).json({ success: false, error: error.message });
   }
 });
+
+
+connectToSnowflake().catch(err => {
+  console.log('⚠️ Snowflake connection failed:', err.message);
+});
+
+app.get('/api/test-snowflake', async (req, res) => {
+  try {
+    const result = await executeQuery('SELECT CURRENT_VERSION() as version');
+    res.json({
+      success: true,
+      message: 'Snowflake connected!',
+      version: result[0].VERSION
+    });
+  } catch (error) {
+    console.error('Error testing Snowflake:', error);
+    res.json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
 
 app.listen(PORT, () => {
   console.log(`🚀 EconHealth Backend running on http://localhost:${PORT}`);
