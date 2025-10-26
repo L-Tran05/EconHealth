@@ -73,6 +73,22 @@ app.get('/api/test-snowflake', async (req, res) => {
   }
 });
 
+// Simple GET endpoint for testing Snowflake
+app.get('/api/test-snowflake-get', async (req, res) => {
+  try {
+    const result = await executeQuery('SELECT COUNT(*) as program_count FROM assistance_programs');
+    res.json({ 
+      success: true, 
+      message: 'Snowflake connected!',
+      totalPrograms: result[0].PROGRAM_COUNT
+    });
+  } catch (error) {
+    res.json({ 
+      success: false, 
+      error: error.message 
+    });
+  }
+});
 
 app.listen(PORT, () => {
   console.log(`🚀 EconHealth Backend running on http://localhost:${PORT}`);
