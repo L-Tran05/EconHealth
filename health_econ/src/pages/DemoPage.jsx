@@ -13,7 +13,9 @@ const DemoPage = ({ onBack }) => {
       {/* Header */}
       <header className="bg-white border-b border-gray-200 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-green-700">EconHealth</h1>
+          <h1 className="text-2xl font-bold" style={{ color: '#178D3D' }}>
+            EconHealth
+          </h1>
           <button onClick={onBack} className="text-gray-600 hover:text-gray-900 text-sm font-medium">
             ← Back to Home
           </button>

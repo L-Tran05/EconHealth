@@ -1,6 +1,6 @@
 import React from 'react';
 import { Shield, DollarSign, Heart, GraduationCap, FileText, Lightbulb, Upload, Search, CheckCircle } from 'lucide-react';
-import FeaturesSection from './components/FeaturesSection';
+import FeaturesSection from '../components/FeaturesSection';
 
 // colors: #BAA500 #599600 #178D3D #008761 #00778D
 
